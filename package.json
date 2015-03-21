@@ -1,6 +1,6 @@
 {
   "name": "ftgoals-1",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "devDependencies": {
     "grunt": "~0.4.5",
     "grunt-cli": "~0.1.13",
@@ -16,7 +16,7 @@
     "grunt-karma": "~0.8.0",
     "grunt-git": "~0.3.2",
     "grunt-exec": "~0.4.4",
-    "grunt-githooks": "~0.3.1",
+    "grunt-bump": "~0.3.0",
     "karma": "~0.12.0",
     "karma-jasmine": "~0.1.0",
     "karma-phantomjs-launcher": "~0.1.4",
