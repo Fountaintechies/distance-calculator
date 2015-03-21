@@ -103,6 +103,21 @@ module.exports = function(grunt) {
 					port: 8080
 				}
 			}
+		},
+		exec: {
+			status: {
+				cmd: 'git status'
+			},
+			add: {
+				cmd: 'git add --all'
+			},
+			commit: {
+				cmd: 'git commit -m" Version<%= pkg.version %>"'
+			},
+			push: {
+				cmd: 'git push origin master'
+			}
+
 		}
 	});
 
@@ -116,8 +131,11 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-bower-task');
 	grunt.loadNpmTasks('grunt-karma');
+	grunt.loadNpmTasks('grunt-exec');
 
-	grunt.registerTask('default', ['bower', 'jshint']);
+
+
+	grunt.registerTask('default', ['exec:status', 'exec:add', 'exec:commit', 'exec:push']);
 	grunt.registerTask('dev', ['bower', 'connect:server', 'watch:dev']);
 	grunt.registerTask('test', ['bower', 'jshint', 'karma:continuous']);
 	grunt.registerTask('minified', ['bower', 'connect:server', 'watch:min']);
