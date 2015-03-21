@@ -1,5 +1,5 @@
 {
-	"name": "Fountaintechies-Goals 1.0",
+	"name": "ftgoals-1",
 	"version": "0.0.1",
 	"devDependencies": {
 		"grunt": "~0.4.5",
@@ -18,5 +18,9 @@
 		"karma-jasmine": "~0.1.0",
 		"karma-phantomjs-launcher": "~0.1.4",
 		"karma-ng-html2js-preprocessor": "~0.1.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:amolc/ftgoals.git"
 	}
 }

@@ -40,9 +40,34 @@ Technology Used to developed. [ Target is to use the least possible technology. 
 Technical Log
 1. Git - Init
 
-Git init successful.
 2. Lets get the github for this project setup
+
+3. package.json is added and is successfully called
+
+npm install
+
+Issues - We may get an issue when installing the package. This happens because a couple of npm packages
+try to get installed in your root npm folder. Please do use sudo.
+
 
 1. Setting Up Grunt
 
-Why - We need to make build task so everything is easy and organised.
+Why - We need to make build task so everything is easy and organise.
+
+
+ bower - Simple task runner. Actually not doing anything at the moment.
+ jslint - Checking the jscode for quality.
+ karma - Test cycles for javascript. ( That's what got me interested)
+ clean - This will clean up the directory.
+ html2js - Simple way to convert a html to js. ( I am not a big fan of this)
+ watch - A simple way to keep the server running and updating when changes are done.
+ connect - a simple local web server. No need of an apache or anything.
+ compress - Let's zip the package.
+
+
+
+
+
+References -
+---------------------
+http://g00glen00b.be/angular-grunt/ - Angular build script information. Useful
