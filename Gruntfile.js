@@ -105,6 +105,12 @@ module.exports = function(grunt) {
 			}
 		},
 		exec: {
+			initnpm: {
+				cmd: 'npm install',
+			},
+			initbower: {
+				cmd: 'bower install',
+			},
 			status: {
 				cmd: 'git status'
 			},
@@ -118,7 +124,25 @@ module.exports = function(grunt) {
 				cmd: 'git push origin master'
 			}
 
-		}
+		},
+		bump: {
+			options: {
+				files: ['package.json'],
+				updateConfigs: [],
+				commit: true,
+				commitMessage: 'Release v%VERSION%',
+				commitFiles: ['-a'],
+				createTag: true,
+				tagName: 'v%VERSION%',
+				tagMessage: 'Version %VERSION%',
+				push: true,
+				pushTo: 'origin',
+				gitDescribeOptions: '--tags --always --abbrev=1 --dirty=-d',
+				globalReplace: false,
+				prereleaseName: false,
+				regExp: false
+			}
+		},
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-jshint');
@@ -132,10 +156,11 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-bower-task');
 	grunt.loadNpmTasks('grunt-karma');
 	grunt.loadNpmTasks('grunt-exec');
+	grunt.loadNpmTasks('grunt-bump');
 
 
-
-	grunt.registerTask('default', ['exec:status', 'exec:add', 'exec:commit', 'exec:push']);
+	grunt.registerTask('default', ['exec:initnpm', 'exec:initbower']);
+	grunt.registerTask('git', ['exec:status', 'exec:add', 'exec:commit', 'exec:push']);
 	grunt.registerTask('dev', ['bower', 'connect:server', 'watch:dev']);
 	grunt.registerTask('test', ['bower', 'jshint', 'karma:continuous']);
 	grunt.registerTask('minified', ['bower', 'connect:server', 'watch:min']);
