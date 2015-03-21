@@ -1,6 +1,6 @@
 {
   "name": "ftgoals-1",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "devDependencies": {
     "grunt": "~0.4.5",
     "grunt-cli": "~0.1.13",
