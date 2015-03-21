@@ -35,3 +35,14 @@ Technology Used to developed. [ Target is to use the least possible technology. 
 2. Firebase - free account.
 3. Ionic for the mobile app.
 4. Github
+5. Grunt
+
+Technical Log
+1. Git - Init
+
+Git init successful.
+2. Lets get the github for this project setup
+
+1. Setting Up Grunt
+
+Why - We need to make build task so everything is easy and organised.
