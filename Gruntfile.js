@@ -26,7 +26,7 @@ module.exports = function(grunt) {
 				configFile: 'config/karma.conf.js'
 			},
 			unit: {
-				singleRun: true
+				singleRun: true,
 			},
 
 			continuous: {
