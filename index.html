@@ -44,12 +44,12 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <tr ng-repeat="song in songs">
+                        <tr ng-repeat="song in songs track by $index">
                           <td>
                             <div class="pull-left">
-                              <strong>{{song.artist}}</strong>
+                              <strong>{{song.artist | titleize}}</strong>
                               <br />
-                              <small>{{song.title}}</small>
+                              <small>{{song.title | titleize}}</small>
                             </div>
                           </td>
                         </tr>
